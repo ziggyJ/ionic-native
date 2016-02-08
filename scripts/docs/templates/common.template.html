@@ -122,7 +122,14 @@ Improve this doc
 <@ endblock @>
 
 
-<@- if doc.directiveInfo @>
+<@- if doc.decorators @>
+<h1><$ doc.decorators[0].name $></h1>
+
+<h1><$ doc.decorators[0].arguments $></h1>
+<@ for prop in doc.decorators[0].arguments @>
+<$ prop $>
+<@ endfor @>
+
 <h2><$ doc.directiveInfo.type $></h2>
 <h3><$ doc.directiveInfo.properties[0].name $>: <code><$ doc.directiveInfo.properties[0].values $></code></h3>
 <@ endif -@>
