@@ -142,7 +142,7 @@ export class GoogleMap {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -634,7 +634,7 @@ export class GoogleMapsMarker {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -719,7 +719,7 @@ export class GoogleMapsMarker {
    * @param visible
    */
   @CordovaInstance()
-  setVisible(visible: boolean): Promise<any> { return; }
+  setVisible(visible: boolean): void { }
 
   /**
    * Return the marker hash code.
@@ -796,8 +796,8 @@ export class GoogleMapsMarker {
    * Change icon url and/or size
    * @param icon
    */
-  @CordovaInstance()
-  setIcon(icon: GoogleMapsMarkerIcon): Promise<any> { return; }
+  @CordovaInstance({ sync: true })
+  setIcon(icon: GoogleMapsMarkerIcon): void { return; }
 
   /**
    * Change title of the infoWindow.
@@ -914,7 +914,7 @@ export class GoogleMapsCircle {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -1058,7 +1058,7 @@ export class GoogleMapsPolyline {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -1203,7 +1203,7 @@ export class GoogleMapsPolygon {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -1350,7 +1350,7 @@ export class GoogleMapsTileOverlay {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -1484,7 +1484,7 @@ export class GoogleMapsGroundOverlay {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
@@ -1609,7 +1609,7 @@ export class GoogleMapsKmlOverlay {
     return new Observable(
       (observer) => {
         this._objectInstance.addEventListener(eventName, observer.next.bind(observer));
-        return () => this._objectInstance.removeEventListener(event, observer.next.bind(observer));
+        return () => this._objectInstance.removeEventListener(eventName, observer.next.bind(observer));
       }
     );
   }
