@@ -796,8 +796,8 @@ export class GoogleMapsMarker {
    * Change icon url and/or size
    * @param icon
    */
-  @CordovaInstance({ sync: true })
-  setIcon(icon: GoogleMapsMarkerIcon): void { return; }
+  @CordovaInstance()
+  setIcon(icon: GoogleMapsMarkerIcon): Promise<any> { return; }
 
   /**
    * Change title of the infoWindow.
