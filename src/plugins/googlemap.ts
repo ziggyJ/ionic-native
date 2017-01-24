@@ -719,7 +719,7 @@ export class GoogleMapsMarker {
    * @param visible
    */
   @CordovaInstance()
-  setVisible(visible: boolean): void { }
+  setVisible(visible: boolean): Promise<any> { return; }
 
   /**
    * Return the marker hash code.
