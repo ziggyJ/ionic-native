@@ -1,8 +1,8 @@
 import { Cordova, Plugin } from './plugin';
 import { Observable } from 'rxjs/Observable';
 
-
 export interface DeeplinkMatch {
+
   /**
    * The route info for the matched route
    */
@@ -19,6 +19,7 @@ export interface DeeplinkMatch {
    * the route was matched (for example, Facebook sometimes adds extra data)
    */
   $link: any;
+
 }
 
 /**
@@ -28,11 +29,49 @@ export interface DeeplinkMatch {
  *
  * @usage
  * ```typescript
- * import { IonicDeeplinks } from 'ionic-native';
+ * import { Deeplinks } from 'ionic-native';
  *
+ * Deeplinks.route({
+      '/about-us': AboutPage,
+      '/universal-links-test': AboutPage,
+      '/products/:productId': ProductPage
+    }).subscribe((match) => {
+      // match.$route - the route we matched, which is the matched entry from the arguments to route()
+      // match.$args - the args passed in the link
+      // match.$link - the full link data
+      console.log('Successfully matched route', match);
+    }, (nomatch) => {
+      // nomatch.$link - the full link data
+      console.error('Got a deeplink that didn\'t match', nomatch);
+    });
  * ```
+ *
+ * Alternatively, if you're using Ionic 2, there's a convenience method that takes a reference to a `NavController` and handles
+ * the actual navigation for you:
+ *
+ * ```typescript
+ * Deeplinks.routeWithNavController(this.navController, {
+    '/about-us': AboutPage,
+    '/products/:productId': ProductPage
+  }).subscribe((match) => {
+      // match.$route - the route we matched, which is the matched entry from the arguments to route()
+      // match.$args - the args passed in the link
+      // match.$link - the full link data
+      console.log('Successfully matched route', match);
+    }, (nomatch) => {
+      // nomatch.$link - the full link data
+      console.error('Got a deeplink that didn\'t match', nomatch);
+    });
+ * ```
+ *
+ * See the [Ionic 2 Deeplinks Demo](https://github.com/driftyco/ionic2-deeplinks-demo/blob/master/app/app.ts) for an example of how to
+ * retrieve the `NavController` reference at runtime.
+ *
+ * @interfaces
+ * DeeplinkMatch
  */
 @Plugin({
+  pluginName: 'Deeplinks',
   plugin: 'ionic-plugin-deeplinks',
   pluginRef: 'IonicDeeplink',
   repo: 'https://github.com/driftyco/ionic-plugin-deeplinks',
@@ -48,8 +87,8 @@ export class Deeplinks {
    * paths takes an object of the form { 'path': data }. If a deeplink
    * matches the path, the resulting path-data pair will be returned in the
    * promise result which you can then use to navigate in the app as you see fit.
-   * @returns {Promise} Returns a Promise that resolves when a deeplink comes through, and
-   * is rejected if a deeplink comes through that does not match a given path.
+   * @returns {Observable<DeeplinkMatch>} Returns an Observable that is called each time a deeplink comes through, and
+   * errors if a deeplink comes through that does not match a given path.
    */
   @Cordova({
     observable: true
@@ -71,8 +110,8 @@ export class Deeplinks {
    * matches the path, the resulting path-data pair will be returned in the
    * promise result which you can then use to navigate in the app as you see fit.
    *
-   * @returns {Promise} Returns a Promise that resolves when a deeplink comes through, and
-   * is rejected if a deeplink comes through that does not match a given path.
+   * @returns {Observable<DeeplinkMatch>} Returns an Observable that resolves each time a deeplink comes through, and
+   * errors if a deeplink comes through that does not match a given path.
    */
   @Cordova({
     observable: true

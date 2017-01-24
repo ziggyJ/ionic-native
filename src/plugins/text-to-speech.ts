@@ -23,8 +23,11 @@ export interface TTSOptions {
  *   .catch((reason: any) => console.log(reason));
  *
  * ```
+ * @interfaces
+ * TTSOptions
  */
 @Plugin({
+  pluginName: 'TextToSpeech',
   plugin: 'cordova-plugin-tts',
   pluginRef: 'TTS',
   repo: 'https://github.com/vilic/cordova-plugin-tts'

@@ -1,3 +1,429 @@
+<a name="2.4.1"></a>
+## [2.4.1](https://github.com/driftyco/ionic-native/compare/v2.4.0...v2.4.1) (2017-01-24)
+
+
+### Bug Fixes
+
+* **screen-orientation:** lockOrientation returns a promise ([1c09ee1](https://github.com/driftyco/ionic-native/commit/1c09ee1)), closes [#939](https://github.com/driftyco/ionic-native/issues/939)
+
+
+
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/driftyco/ionic-native/compare/v2.3.3...v2.4.0) (2017-01-24)
+
+
+
+<a name="2.3.3"></a>
+## [2.3.3](https://github.com/driftyco/ionic-native/compare/v2.3.2...v2.3.3) (2017-01-24)
+
+
+### Bug Fixes
+
+* **google-maps:** fix event listeners ([416071a](https://github.com/driftyco/ionic-native/commit/416071a)), closes [#999](https://github.com/driftyco/ionic-native/issues/999)
+
+
+### Features
+
+* **pinterest:** add pinterest plugin ([466437a](https://github.com/driftyco/ionic-native/commit/466437a))
+
+
+
+<a name="2.3.2"></a>
+## [2.3.2](https://github.com/driftyco/ionic-native/compare/v2.3.1...v2.3.2) (2017-01-24)
+
+
+### Bug Fixes
+
+* **googlemaps:** fix GoogleMapsLaLngBounds ([c3127d3](https://github.com/driftyco/ionic-native/commit/c3127d3)), closes [#972](https://github.com/driftyco/ionic-native/issues/972)
+
+
+
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/driftyco/ionic-native/compare/v2.3.0...v2.3.1) (2017-01-22)
+
+
+### Bug Fixes
+
+* add clearAllNotifications() ([8c021bc](https://github.com/driftyco/ionic-native/commit/8c021bc))
+* **battery-status:** add missing pluginRef ([3da0efe](https://github.com/driftyco/ionic-native/commit/3da0efe))
+* **core:** fix exception in CordovaProperty ([#998](https://github.com/driftyco/ionic-native/issues/998)) ([cb29363](https://github.com/driftyco/ionic-native/commit/cb29363)), closes [#992](https://github.com/driftyco/ionic-native/issues/992)
+* **core:** fix plugin check ([da7a370](https://github.com/driftyco/ionic-native/commit/da7a370))
+* **plugin:** adds subscribe() and unsubscribe() ([94025a7](https://github.com/driftyco/ionic-native/commit/94025a7))
+
+
+### Features
+
+* **core:** add PluginConfig interface ([b983de2](https://github.com/driftyco/ionic-native/commit/b983de2)), closes [#996](https://github.com/driftyco/ionic-native/issues/996)
+* **google-maps:** add base class functions ([#993](https://github.com/driftyco/ionic-native/issues/993)) ([9f98f8e](https://github.com/driftyco/ionic-native/commit/9f98f8e))
+
+
+
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/driftyco/ionic-native/compare/v2.2.17...v2.3.0) (2017-01-20)
+
+
+### Bug Fixes
+
+* **native-geocoder:** fix callback order ([dbf95ea](https://github.com/driftyco/ionic-native/commit/dbf95ea))
+
+
+### Features
+
+* **backlight:** add Backlight plugin ([#973](https://github.com/driftyco/ionic-native/issues/973)) ([1279114](https://github.com/driftyco/ionic-native/commit/1279114))
+* **broadcaster:** add Broadcaster plugin ([#877](https://github.com/driftyco/ionic-native/issues/877)) ([1e38a6c](https://github.com/driftyco/ionic-native/commit/1e38a6c))
+* **fingerprint-aio:** add cordova-plugin-fingerprint-aio ([#845](https://github.com/driftyco/ionic-native/issues/845)) ([1615b74](https://github.com/driftyco/ionic-native/commit/1615b74))
+* **firebase:** add firebase plugin ([#914](https://github.com/driftyco/ionic-native/issues/914)) ([8e98481](https://github.com/driftyco/ionic-native/commit/8e98481)), closes [#608](https://github.com/driftyco/ionic-native/issues/608)
+* **launch-review:** add LaunchReview plugin ([#949](https://github.com/driftyco/ionic-native/issues/949)) ([9c75a06](https://github.com/driftyco/ionic-native/commit/9c75a06))
+* **nativegeocoder:** add NativeGeocoder plugin ([#800](https://github.com/driftyco/ionic-native/issues/800)) ([911537b](https://github.com/driftyco/ionic-native/commit/911537b))
+* **navigationbar:** add NavigationBar plugin ([#826](https://github.com/driftyco/ionic-native/issues/826)) ([70c15c3](https://github.com/driftyco/ionic-native/commit/70c15c3))
+* **rollbar:** add Rollbar plugin ([#832](https://github.com/driftyco/ionic-native/issues/832)) ([229f550](https://github.com/driftyco/ionic-native/commit/229f550))
+* **serial:** add Serial plugin ([#952](https://github.com/driftyco/ionic-native/issues/952)) ([ac748ab](https://github.com/driftyco/ionic-native/commit/ac748ab))
+* **speech-recognition:** add SpeechRecognition plugin ([#897](https://github.com/driftyco/ionic-native/issues/897)) ([7c30718](https://github.com/driftyco/ionic-native/commit/7c30718))
+* **stripe:** add stripe plugin ([#913](https://github.com/driftyco/ionic-native/issues/913)) ([0ec46b0](https://github.com/driftyco/ionic-native/commit/0ec46b0))
+
+
+
+<a name="2.2.17"></a>
+## [2.2.17](https://github.com/driftyco/ionic-native/compare/v2.2.16...v2.2.17) (2017-01-20)
+
+
+### Bug Fixes
+
+* **app-rate:** onRateDialogShow callback ([#985](https://github.com/driftyco/ionic-native/issues/985)) ([ab681cc](https://github.com/driftyco/ionic-native/commit/ab681cc))
+* **core:** increase deviceready timeout for sanity ([0ab14a0](https://github.com/driftyco/ionic-native/commit/0ab14a0))
+
+
+### Features
+
+* **barcodescanner:** add missing options ([#966](https://github.com/driftyco/ionic-native/issues/966)) ([e902856](https://github.com/driftyco/ionic-native/commit/e902856)), closes [#965](https://github.com/driftyco/ionic-native/issues/965)
+
+
+
+<a name="2.2.16"></a>
+## [2.2.16](https://github.com/driftyco/ionic-native/compare/v2.2.15...v2.2.16) (2017-01-11)
+
+
+
+<a name="2.2.15"></a>
+## [2.2.15](https://github.com/driftyco/ionic-native/compare/v2.2.14...v2.2.15) (2017-01-11)
+
+
+### Bug Fixes
+
+* **apprate:** captialize URL in storeAppURL property ([b98fa28](https://github.com/driftyco/ionic-native/commit/b98fa28))
+* **ble:** stopScan takes no args when used as clear function ([#944](https://github.com/driftyco/ionic-native/issues/944)) ([6ddd2aa](https://github.com/driftyco/ionic-native/commit/6ddd2aa))
+* **onesignal:** OSNotification.app_id is optional ([#946](https://github.com/driftyco/ionic-native/issues/946)) ([ebf0716](https://github.com/driftyco/ionic-native/commit/ebf0716))
+
+
+
+<a name="2.2.14"></a>
+## [2.2.14](https://github.com/driftyco/ionic-native/compare/v2.2.13...v2.2.14) (2017-01-07)
+
+
+### Bug Fixes
+
+* **google-analytics:** fix startTrackerWithId when interval is not provided ([49fe24d](https://github.com/driftyco/ionic-native/commit/49fe24d))
+* **google-plus:** fixes login without options ([ca14bf6](https://github.com/driftyco/ionic-native/commit/ca14bf6)), closes [#932](https://github.com/driftyco/ionic-native/issues/932)
+* **inappbrowser:** fix insertCSS method name ([de07df6](https://github.com/driftyco/ionic-native/commit/de07df6)), closes [#921](https://github.com/driftyco/ionic-native/issues/921)
+* **mixpanel:** fix issue when not passing eventProperties ([#927](https://github.com/driftyco/ionic-native/issues/927)) ([bbf75bc](https://github.com/driftyco/ionic-native/commit/bbf75bc))
+* **nfc:** add missing param for addMimeTypeListener ([#937](https://github.com/driftyco/ionic-native/issues/937)) ([ca60c5b](https://github.com/driftyco/ionic-native/commit/ca60c5b))
+* **push:** fix typing for additionalData ([0d6997c](https://github.com/driftyco/ionic-native/commit/0d6997c)), closes [#868](https://github.com/driftyco/ionic-native/issues/868)
+
+
+### Features
+
+* **background-geolocation:** add altitudeAccuracy into response typings ([#922](https://github.com/driftyco/ionic-native/issues/922)) ([8eb656c](https://github.com/driftyco/ionic-native/commit/8eb656c))
+* **market:** add search method, return promises ([d62779a](https://github.com/driftyco/ionic-native/commit/d62779a))
+
+
+
+<a name="2.2.13"></a>
+## [2.2.13](https://github.com/driftyco/ionic-native/compare/v2.2.12...v2.2.13) (2016-12-27)
+
+
+### Bug Fixes
+
+* **admob:** add adId prop to AdMobOptions ([d5dfdf8](https://github.com/driftyco/ionic-native/commit/d5dfdf8))
+* **background-mode:** isEnabled and isActive return booleans ([ba77fd7](https://github.com/driftyco/ionic-native/commit/ba77fd7)), closes [#908](https://github.com/driftyco/ionic-native/issues/908)
+* **diagnostic:** add missing types ([1841220](https://github.com/driftyco/ionic-native/commit/1841220)), closes [#905](https://github.com/driftyco/ionic-native/issues/905)
+* **diagnostic:** add permissionStatus types ([#890](https://github.com/driftyco/ionic-native/issues/890)) ([3385c1b](https://github.com/driftyco/ionic-native/commit/3385c1b))
+
+
+### Features
+
+* **android-fingerprint-auth:** update to v1.2.1 ([#910](https://github.com/driftyco/ionic-native/issues/910)) ([a1b0f88](https://github.com/driftyco/ionic-native/commit/a1b0f88))
+* **nfc:** add new functions ([#853](https://github.com/driftyco/ionic-native/issues/853)) ([c44fb75](https://github.com/driftyco/ionic-native/commit/c44fb75))
+* **onesignal:** improve typings ([#888](https://github.com/driftyco/ionic-native/issues/888)) ([56e8eae](https://github.com/driftyco/ionic-native/commit/56e8eae))
+* **sim:** add new methods ([#894](https://github.com/driftyco/ionic-native/issues/894)) ([0c36988](https://github.com/driftyco/ionic-native/commit/0c36988))
+
+
+
+<a name="2.2.12"></a>
+## [2.2.12](https://github.com/driftyco/ionic-native/compare/v2.2.11...v2.2.12) (2016-12-16)
+
+
+### Bug Fixes
+
+* **camera-preview:** parameter size is optional ([#871](https://github.com/driftyco/ionic-native/issues/871)) ([61dc8aa](https://github.com/driftyco/ionic-native/commit/61dc8aa))
+* **diagnostic:** permissionStatus gets values from plugin in runtime ([9986e0d](https://github.com/driftyco/ionic-native/commit/9986e0d)), closes [#872](https://github.com/driftyco/ionic-native/issues/872)
+* **network:** update API ([ec5e27b](https://github.com/driftyco/ionic-native/commit/ec5e27b))
+* **sms:** fix callback index when omitting options param ([114a74d](https://github.com/driftyco/ionic-native/commit/114a74d)), closes [#858](https://github.com/driftyco/ionic-native/issues/858)
+
+
+### Features
+
+* **admob:** update api and docs ([6ba1d49](https://github.com/driftyco/ionic-native/commit/6ba1d49))
+
+
+
+<a name="2.2.11"></a>
+## [2.2.11](https://github.com/driftyco/ionic-native/compare/v2.2.10...v2.2.11) (2016-12-06)
+
+
+### Bug Fixes
+
+* **cordova-property:** fixes static properties of classes ([7ae6e10](https://github.com/driftyco/ionic-native/commit/7ae6e10))
+* **device:** fixes device plugin ([d918844](https://github.com/driftyco/ionic-native/commit/d918844))
+
+
+### BREAKING CHANGES
+
+* device: device property no longer exists
+
+
+
+<a name="2.2.10"></a>
+## [2.2.10](https://github.com/driftyco/ionic-native/compare/v2.2.9...v2.2.10) (2016-12-04)
+
+
+### Bug Fixes
+
+* **contacts:** fix few bugs in Contacts ([#846](https://github.com/driftyco/ionic-native/issues/846)) ([b19f6d1](https://github.com/driftyco/ionic-native/commit/b19f6d1))
+* **sqlite:** add static constructor, and fix resolve type ([#697](https://github.com/driftyco/ionic-native/issues/697)) ([9082c5e](https://github.com/driftyco/ionic-native/commit/9082c5e))
+
+
+### Features
+
+* **actionsheet:** add ActionSheetOptions interface ([f211da7](https://github.com/driftyco/ionic-native/commit/f211da7))
+* **googlemap:** add disableAutoPan to GoogleMapsMarkerOptions ([cf75a53](https://github.com/driftyco/ionic-native/commit/cf75a53)), closes [#844](https://github.com/driftyco/ionic-native/issues/844)
+* **googlemaps:** add markerClick and infoClick to MarkerOptions ([6f7171d](https://github.com/driftyco/ionic-native/commit/6f7171d))
+
+
+
+<a name="2.2.9"></a>
+## [2.2.9](https://github.com/driftyco/ionic-native/compare/v2.2.8...v2.2.9) (2016-12-01)
+
+
+
+<a name="2.2.8"></a>
+## [2.2.8](https://github.com/driftyco/ionic-native/compare/v2.2.7...v2.2.8) (2016-12-01)
+
+
+### Bug Fixes
+
+* add return ([3fdc4a8](https://github.com/driftyco/ionic-native/commit/3fdc4a8))
+* **card-io:** fix typo in options ([e6700a3](https://github.com/driftyco/ionic-native/commit/e6700a3))
+* **globalization:** add missing parameter to numberToString function ([1072ab1](https://github.com/driftyco/ionic-native/commit/1072ab1)), closes [#835](https://github.com/driftyco/ionic-native/issues/835)
+* **headercolor:** solve typo in usage and chore ([bab2971](https://github.com/driftyco/ionic-native/commit/bab2971))
+
+
+### Features
+
+* **card-io:** add typing for response ([2e82320](https://github.com/driftyco/ionic-native/commit/2e82320))
+
+
+
+<a name="2.2.7"></a>
+## [2.2.7](https://github.com/driftyco/ionic-native/compare/v2.2.5...v2.2.7) (2016-11-24)
+
+
+### Bug Fixes
+
+* **3dTouch:** fixes onHomeIconPressed ([#813](https://github.com/driftyco/ionic-native/issues/813)) ([695099b](https://github.com/driftyco/ionic-native/commit/695099b))
+* **camera-preview:** formatting. Closes [#790](https://github.com/driftyco/ionic-native/issues/790) ([5577c51](https://github.com/driftyco/ionic-native/commit/5577c51))
+* **datepicker:** fix allowOldDates option ([#761](https://github.com/driftyco/ionic-native/issues/761)) ([fa03fa5](https://github.com/driftyco/ionic-native/commit/fa03fa5))
+* **diagnostics:** fix [#776](https://github.com/driftyco/ionic-native/issues/776) ([#777](https://github.com/driftyco/ionic-native/issues/777)) ([01b30c6](https://github.com/driftyco/ionic-native/commit/01b30c6))
+* **file:** correct writeFile flags ([9bd8997](https://github.com/driftyco/ionic-native/commit/9bd8997)), closes [#789](https://github.com/driftyco/ionic-native/issues/789)
+* **googlemap:** fix typoe googledesic to geodesic ([78b3ec5](https://github.com/driftyco/ionic-native/commit/78b3ec5)), closes [#765](https://github.com/driftyco/ionic-native/issues/765)
+* **native-audio:** completeCallback is optional on play method ([b719a03](https://github.com/driftyco/ionic-native/commit/b719a03)), closes [#792](https://github.com/driftyco/ionic-native/issues/792)
+* **nfc:** don't bind to name field, fix [#740](https://github.com/driftyco/ionic-native/issues/740) ([#749](https://github.com/driftyco/ionic-native/issues/749)) ([ca43394](https://github.com/driftyco/ionic-native/commit/ca43394))
+* **plugin:** don't bind to name field. Fixes [#740](https://github.com/driftyco/ionic-native/issues/740) ([71916a8](https://github.com/driftyco/ionic-native/commit/71916a8))
+* **video-player:** scalingMode is number ([f07431a](https://github.com/driftyco/ionic-native/commit/f07431a)), closes [#774](https://github.com/driftyco/ionic-native/issues/774)
+
+
+### Features
+
+* **camera-preview:** add disable method ([6ad54ec](https://github.com/driftyco/ionic-native/commit/6ad54ec))
+* **google-analytics:** new interval period parameter ([abd910d](https://github.com/driftyco/ionic-native/commit/abd910d)), closes [#816](https://github.com/driftyco/ionic-native/issues/816)
+* **google-map:** add get and set methods to Marker class ([51ab03d](https://github.com/driftyco/ionic-native/commit/51ab03d)), closes [#798](https://github.com/driftyco/ionic-native/issues/798)
+* **headercolor:** add HeaderColor plugin ([93696d5](https://github.com/driftyco/ionic-native/commit/93696d5)), closes [#760](https://github.com/driftyco/ionic-native/issues/760)
+
+
+
+<a name="2.2.5"></a>
+## [2.2.5](https://github.com/driftyco/ionic-native/compare/v2.2.4...v2.2.5) (2016-10-27)
+
+
+### Bug Fixes
+
+* **3dtouch:** add missing property ([#739](https://github.com/driftyco/ionic-native/issues/739)) ([757d096](https://github.com/driftyco/ionic-native/commit/757d096))
+* **geolocation:** fix watchPosition return type ([d5310b0](https://github.com/driftyco/ionic-native/commit/d5310b0)), closes [#741](https://github.com/driftyco/ionic-native/issues/741)
+* **nfc:** fix Ndef class ([ac181c5](https://github.com/driftyco/ionic-native/commit/ac181c5)), closes [#713](https://github.com/driftyco/ionic-native/issues/713)
+* **sqlite:** check if plugin exists before opening database ([6f47371](https://github.com/driftyco/ionic-native/commit/6f47371))
+* **sqlite:** check if plugin exists before opening database ([c98b4f4](https://github.com/driftyco/ionic-native/commit/c98b4f4))
+* **sqlite:** fix callback issue with transaction method ([a72cd59](https://github.com/driftyco/ionic-native/commit/a72cd59)), closes [#732](https://github.com/driftyco/ionic-native/issues/732)
+
+
+### Features
+
+* **diagnostic:** add missing functions ([eb03de9](https://github.com/driftyco/ionic-native/commit/eb03de9)), closes [#743](https://github.com/driftyco/ionic-native/issues/743)
+* **filepath:** add cordova-plugin-filepath ([#714](https://github.com/driftyco/ionic-native/issues/714)) ([0660a3b](https://github.com/driftyco/ionic-native/commit/0660a3b))
+* **plugins:** add name field ([9677656](https://github.com/driftyco/ionic-native/commit/9677656))
+* **sms:** add hasPermission method ([8fbf1f2](https://github.com/driftyco/ionic-native/commit/8fbf1f2)), closes [#721](https://github.com/driftyco/ionic-native/issues/721)
+
+
+
+<a name="2.2.4"></a>
+## [2.2.4](https://github.com/driftyco/ionic-native/compare/v2.2.3...v2.2.4) (2016-10-15)
+
+
+### Bug Fixes
+
+* **sqlite:** fix callback order for transaction ([#700](https://github.com/driftyco/ionic-native/issues/700)) ([799e2f0](https://github.com/driftyco/ionic-native/commit/799e2f0))
+
+
+### Features
+
+* **device-feedback:** add DeviceFeedback plugin ([#696](https://github.com/driftyco/ionic-native/issues/696)) ([bbda6e2](https://github.com/driftyco/ionic-native/commit/bbda6e2))
+* **image-picker:** add new android methods ([3edfafb](https://github.com/driftyco/ionic-native/commit/3edfafb))
+* **mixpanel:** MixpanelPeople returns promises ([#681](https://github.com/driftyco/ionic-native/issues/681)) ([b95f88c](https://github.com/driftyco/ionic-native/commit/b95f88c)), closes [#667](https://github.com/driftyco/ionic-native/issues/667)
+
+
+
+<a name="2.2.3"></a>
+## [2.2.3](https://github.com/driftyco/ionic-native/compare/v2.2.2...v2.2.3) (2016-10-14)
+
+
+### Bug Fixes
+
+* **googlemaps:** Expose 'type' property in GoogleMapsLatLngBounds [#693](https://github.com/driftyco/ionic-native/issues/693) ([#694](https://github.com/driftyco/ionic-native/issues/694)) ([74a252b](https://github.com/driftyco/ionic-native/commit/74a252b))
+* **onesignal:** update to match latest API version ([#691](https://github.com/driftyco/ionic-native/issues/691)) ([babfb0d](https://github.com/driftyco/ionic-native/commit/babfb0d))
+
+
+
+<a name="2.2.2"></a>
+## [2.2.2](https://github.com/driftyco/ionic-native/compare/v2.2.1...v2.2.2) (2016-10-12)
+
+
+### Bug Fixes
+
+* **file:** getFreeDiskSpace now works ([d2f42ef](https://github.com/driftyco/ionic-native/commit/d2f42ef))
+* **file:** read methods can accept Blobs too ([276d61b](https://github.com/driftyco/ionic-native/commit/276d61b))
+
+
+### Features
+
+* **file:** getFile and getDirectory are now public ([5c92455](https://github.com/driftyco/ionic-native/commit/5c92455)), closes [#657](https://github.com/driftyco/ionic-native/issues/657)
+
+
+
+<a name="2.2.1"></a>
+## [2.2.1](https://github.com/driftyco/ionic-native/compare/v2.2.0...v2.2.1) (2016-10-12)
+
+
+### Bug Fixes
+
+* **diagnostic:** misspelled getContactsAuthorizationStatus method ([#678](https://github.com/driftyco/ionic-native/issues/678)) ([bff4862](https://github.com/driftyco/ionic-native/commit/bff4862))
+* **file:** fix writeFile method ([842a80d](https://github.com/driftyco/ionic-native/commit/842a80d))
+* **file:** last parameter for writeFile now only accepts options ([5710eb7](https://github.com/driftyco/ionic-native/commit/5710eb7))
+* **http:** export via window.IonicNative ([#675](https://github.com/driftyco/ionic-native/issues/675)) ([cf7abe1](https://github.com/driftyco/ionic-native/commit/cf7abe1))
+* **location-accuracy:** accuracy param is number ([c2d4f1c](https://github.com/driftyco/ionic-native/commit/c2d4f1c)), closes [#676](https://github.com/driftyco/ionic-native/issues/676)
+* **themeablebrowser:** add missed options ([#680](https://github.com/driftyco/ionic-native/issues/680)) ([e28e5b0](https://github.com/driftyco/ionic-native/commit/e28e5b0))
+
+
+### Features
+
+* **file:** resolveLocalFilesystemUrl and resolveDirectoryUrl are now public methods ([542ff4c](https://github.com/driftyco/ionic-native/commit/542ff4c)), closes [#657](https://github.com/driftyco/ionic-native/issues/657)
+
+
+
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/driftyco/ionic-native/compare/v2.1.9...v2.2.0) (2016-10-11)
+
+
+### Bug Fixes
+
+* **native-transitions:** add missing interface properties ([35c8bbd](https://github.com/driftyco/ionic-native/commit/35c8bbd))
+* **onesignal:** update to match latest api ([#671](https://github.com/driftyco/ionic-native/issues/671)) ([7c6e6d8](https://github.com/driftyco/ionic-native/commit/7c6e6d8)), closes [#667](https://github.com/driftyco/ionic-native/issues/667)
+
+
+### Features
+
+* **http:** add cordovaHTTP wrapper ([#674](https://github.com/driftyco/ionic-native/issues/674)) ([f0961c7](https://github.com/driftyco/ionic-native/commit/f0961c7))
+
+
+
+<a name="2.1.9"></a>
+## [2.1.9](https://github.com/driftyco/ionic-native/compare/v2.1.7...v2.1.9) (2016-10-09)
+
+
+### Bug Fixes
+
+* **googlemaps:** fixes GoogleMapsLatLng class ([11653ce](https://github.com/driftyco/ionic-native/commit/11653ce))
+* **paypal:** add optional details param to paypalpayment ([7200845](https://github.com/driftyco/ionic-native/commit/7200845))
+* **paypal:** problems with selection of PayPal environment ([#662](https://github.com/driftyco/ionic-native/issues/662)) ([3dd6a92](https://github.com/driftyco/ionic-native/commit/3dd6a92))
+* **thmeable-browser:** fix the name of the plugin ([#663](https://github.com/driftyco/ionic-native/issues/663)) ([1368175](https://github.com/driftyco/ionic-native/commit/1368175))
+
+
+
+<a name="2.1.7"></a>
+## [2.1.7](https://github.com/driftyco/ionic-native/compare/v2.1.6...v2.1.7) (2016-10-07)
+
+
+### Bug Fixes
+
+* **paypal:** fixed currency code not found issue ([#653](https://github.com/driftyco/ionic-native/issues/653)) ([598f8a9](https://github.com/driftyco/ionic-native/commit/598f8a9))
+
+
+
+<a name="2.1.6"></a>
+## [2.1.6](https://github.com/driftyco/ionic-native/compare/v2.1.3...v2.1.6) (2016-10-06)
+
+
+### Bug Fixes
+
+* **google-analytics:** specify successIndex and errorIndex for methods with optional params ([6f23bef](https://github.com/driftyco/ionic-native/commit/6f23bef))
+* **paypal:** fix helper classes ([f002657](https://github.com/driftyco/ionic-native/commit/f002657))
+
+
+
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/driftyco/ionic-native/compare/v2.1.2...v2.1.3) (2016-10-06)
+
+
+### Bug Fixes
+
+* **google-analytics:** add missing methods, fix return types ([77b0277](https://github.com/driftyco/ionic-native/commit/77b0277))
+* **google-analytics:** add newSession param ([f62e108](https://github.com/driftyco/ionic-native/commit/f62e108))
+* **google-analytics:** fix depreciated plugin reference ([40325ca](https://github.com/driftyco/ionic-native/commit/40325ca))
+
+
+
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/driftyco/ionic-native/compare/v2.1.0...v2.1.2) (2016-10-06)
+
+
+### Bug Fixes
+
+* **googlemaps:** add missing properties ([72a694a](https://github.com/driftyco/ionic-native/commit/72a694a)), closes [#642](https://github.com/driftyco/ionic-native/issues/642)
+
+
+### Features
+
+* **zBar:** add zBar barcode scanner plugin ([#634](https://github.com/driftyco/ionic-native/issues/634)) ([bbbbb3e](https://github.com/driftyco/ionic-native/commit/bbbbb3e))
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/driftyco/ionic-native/compare/v2.0.3...v2.1.0) (2016-10-03)
 

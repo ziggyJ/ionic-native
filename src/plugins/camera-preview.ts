@@ -1,20 +1,28 @@
 import { Cordova, Plugin } from './plugin';
 import { Observable } from 'rxjs/Observable';
 
-
 export interface CameraPreviewRect {
+
   x: number;
+
   y: number;
+
   width: number;
+
   height: number;
+
 }
 
 export interface CameraPreviewSize {
+
   maxWidth: number;
+
   maxHeight: number;
+
 }
 
 /**
+ * @beta
  * @name CameraPreview
  * @description
  * Showing camera preview in HTML
@@ -23,7 +31,7 @@ export interface CameraPreviewSize {
  *
  * @usage
  * ```
- * import { CameraPreview } from 'ionic-native';
+ * import { CameraPreview, CameraPreviewRect } from 'ionic-native';
  *
  * // camera options (Size and location)
  * let cameraRect: CameraPreviewRect = {
@@ -38,9 +46,10 @@ export interface CameraPreviewSize {
  * CameraPreview.startCamera(
  *   cameraRect, // position and size of preview
  *   'front', // default camera
- *   true, // tape to take picture
+ *   true, // tap to take picture
  *   false, // disable drag
- *   true // send the preview to the back of the screen so we can add overlaying elements
+ *   false, // keep preview in front. Set to true (back of the screen) to apply overlaying elements
+ *   1 // set the preview alpha
  * );
  *
  * // Set the handler to run every time we take a picture
@@ -67,8 +76,12 @@ export interface CameraPreviewSize {
  *
  * ```
  *
+ * @interfaces
+ * CameraPreviewRect
+ * CameraPreviewSize
  */
 @Plugin({
+  pluginName: 'CameraPreview',
   plugin: 'cordova-plugin-camera-preview',
   pluginRef: 'cordova.plugins.camerapreview',
   repo: 'https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview',
@@ -88,7 +101,7 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static startCamera(rect: CameraPreviewRect, defaultCamera: string, tapEnabled: boolean, dragEnabled: boolean, toBack: boolean, alpha: number): void { };
+  static startCamera(rect: CameraPreviewRect, defaultCamera: string, tapEnabled: boolean, dragEnabled: boolean, toBack: boolean, alpha: number): void { }
 
   /**
    * Stops the camera preview instance.
@@ -96,7 +109,7 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static stopCamera(): void { };
+  static stopCamera(): void { }
 
   /**
    * Take the picture, the parameter size is optional
@@ -105,15 +118,16 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static takePicture(size: CameraPreviewSize): void { };
+  static takePicture(size?: CameraPreviewSize): void { }
 
   /**
    * Register a callback function that receives the original picture and the image captured from the preview box.
+   * @returns {Observable<any>}
    */
   @Cordova({
     observable: true
   })
-  static setOnPictureTakenHandler(): Observable<any> { return; };
+  static setOnPictureTakenHandler(): Observable<any> { return; }
 
   /**
    * Switch from the rear camera and front camera, if available.
@@ -121,7 +135,7 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static switchCamera(): void { };
+  static switchCamera(): void { }
 
   /**
    * Show the camera preview box.
@@ -129,7 +143,7 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static show(): void { };
+  static show(): void { }
 
   /**
    * Hide the camera preview box.
@@ -137,15 +151,15 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static hide(): void { };
+  static hide(): void { }
 
   /**
-   * Set the default mode for the Flash.
+   * Disables the camera preview
    */
-  // @Cordova({
-  //   sync: true
-  // })
-  // static setFlashMode(mode: number): void { };
+  @Cordova({
+    sync: true
+  })
+  static disable(): void { }
 
   /**
    * Set camera color effect.
@@ -153,16 +167,6 @@ export class CameraPreview {
   @Cordova({
     sync: true
   })
-  static setColorEffect(effect: string): void { };
-
-  /**
-   * @private
-   * @enum {number}
-   */
-  static FlashMode = {
-    OFF: 0,
-    ON: 1,
-    AUTO: 2
-  };
+  static setColorEffect(effect: string): void { }
 
 }

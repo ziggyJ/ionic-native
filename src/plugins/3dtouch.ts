@@ -1,8 +1,60 @@
 import { Cordova, Plugin } from './plugin';
 import { Observable } from 'rxjs/Observable';
 
-
 declare var window: any;
+
+export interface ThreeDeeTouchQuickAction {
+
+  /**
+   * Type that can be used in the onHomeIconPressed callback
+   */
+  type?: string;
+
+  /**
+   * Title
+   */
+  title: string;
+
+  /**
+   * Subtitle
+   */
+  subtitle?: string;
+
+  /**
+   * Icon type. Case insensitive
+   */
+  iconType?: string;
+
+  /**
+   * Icon template
+   */
+  iconTemplate?: string;
+
+}
+
+export interface ThreeDeeTouchForceTouch {
+
+  /**
+   * Touch force
+   */
+  force: number;
+
+  /**
+   * Timestamp of action
+   */
+  timestamp: number;
+
+  /**
+   * X coordinate of action
+   */
+  x: number;
+
+  /**
+   * Y coordinate of action
+   */
+  y: number;
+
+}
 
 /**
  * @name 3DTouch
@@ -54,7 +106,7 @@ declare var window: any;
  * ];
  * ThreeDeeTouch.configureQuickActions(actions);
  *
- * ThreeDeeTouchForceTouch.onHomeIconPressed().subscribe(
+ * ThreeDeeTouch.onHomeIconPressed().subscribe(
  *  (payload) => {
  *    // returns an object that is the button you presed
  *    console.log('Pressed the ${payload.title} button')
@@ -63,8 +115,12 @@ declare var window: any;
  *  }
  * )
  * ```
+ * @interfaces
+ * ThreeDeeTouchQuickAction
+ * ThreeDeeTouchForceTouch
  */
 @Plugin({
+  pluginName: 'ThreeDeeTouch',
   plugin: 'cordova-plugin-3dtouch',
   pluginRef: 'ThreeDeeTouch',
   repo: 'https://github.com/EddyVerbruggen/cordova-plugin-3dtouch',
@@ -94,6 +150,7 @@ export class ThreeDeeTouch {
    * @param {string} title Title for your action
    * @param {string} subtitle (optional) A short description for your action
    * @param {string} iconType (optional) Choose between Prohibit, Contact, Home, MarkLocation, Favorite, Love, Cloud, Invitation, Confirmation, Mail, Message, Date, Time, CapturePhoto, CaptureVideo, Task, TaskCompleted, Alarm, Bookmark, Shuffle, Audio, Update
+   * @param {string} iconTemplate (optional) Can be used to provide your own icon
    */
   @Cordova({
     sync: true
@@ -106,7 +163,7 @@ export class ThreeDeeTouch {
    */
   static onHomeIconPressed(): Observable<any> {
     return new Observable(observer => {
-      if (window.ThreeDeeTouch && window.ThreeDeeTouch.onHomeIconPressed) {
+      if (window.ThreeDeeTouch) {
         window.ThreeDeeTouch.onHomeIconPressed = observer.next.bind(observer);
       } else {
         observer.error('3dTouch plugin is not available.');
@@ -132,18 +189,4 @@ export class ThreeDeeTouch {
   })
   static disableLinkPreview(): void { }
 
-}
-
-export interface ThreeDeeTouchQuickAction {
-  type?: string;
-  title: string;
-  subtitle?: string;
-  iconType?: string;
-}
-
-export interface ThreeDeeTouchForceTouch {
-  force: number;
-  timestamp: number;
-  x: number;
-  y: number;
 }
